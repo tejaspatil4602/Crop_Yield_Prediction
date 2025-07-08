@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Prediction Engine Architecture</text>
+    
+    <!-- Data Input -->
+    <rect x="50" y="100" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="125" y="135" text-anchor="middle">Input Data</text>
+    
+    <!-- Data Preprocessing -->
+    <rect x="50" y="250" width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="125" y="280" text-anchor="middle" font-size="14">Data Preprocessing</text>
+    <text x="125" y="300" text-anchor="middle" font-size="12">- Data Cleaning</text>
+    <text x="125" y="320" text-anchor="middle" font-size="12">- Normalization</text>
+    <text x="125" y="340" text-anchor="middle" font-size="12">- Feature Scaling</text>
+    
+    <!-- Feature Engineering -->
+    <rect x="325" y="250" width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="280" text-anchor="middle" font-size="14">Feature Engineering</text>
+    <text x="400" y="300" text-anchor="middle" font-size="12">- Feature Selection</text>
+    <text x="400" y="320" text-anchor="middle" font-size="12">- Feature Extraction</text>
+    <text x="400" y="340" text-anchor="middle" font-size="12">- Feature Creation</text>
+    
+    <!-- Model Selection -->
+    <rect x="600" y="250" width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="675" y="280" text-anchor="middle" font-size="14">Model Selection</text>
+    <text x="675" y="300" text-anchor="middle" font-size="12">- Algorithm Choice</text>
+    <text x="675" y="320" text-anchor="middle" font-size="12">- Hyperparameters</text>
+    <text x="675" y="340" text-anchor="middle" font-size="12">- Model Training</text>
+    
+    <!-- Prediction Generation -->
+    <rect x="325" y="450" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="485" text-anchor="middle">Yield Prediction</text>
+    
+    <!-- Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+    
+    <!-- Connecting Lines -->
+    <line x1="125" y1="160" x2="125" y2="250" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="300" x2="325" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="475" y1="300" x2="600" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="675" y1="350" x2="675" y2="480" stroke="black" stroke-width="2"/>
+    <line x1="675" y1="480" x2="475" y2="480" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>

@@ -1,0 +1,36 @@
+List of Figures
+
+7.3 Data Flow: Visualization of the data integration process . . . . . . . . . . . . . 24
+7.4 Neural Network Architecture: Layer structure and connections . . . . . . . . . 26
+7.5 Attention Mechanism: Visualization of attention computations . . . . . . . . . 28
+7.6 Training Progress: Loss curves and metrics . . . . . . . . . . . . . . . . . . . 30
+7.7 API Architecture: Request/response flow . . . . . . . . . . . . . . . . . . . . . 31
+7.8 Monitoring Dashboard: Key performance indicators . . . . . . . . . . . . . . . 33
+7.9 Future Roadmap: Visualization of planned improvements . . . . . . . . . . . . 34
+8.1 High-level visualization showing the relationship between different UI compo-
+nents and their layout . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+8.2 Flowchart showing the authentication process and user session management . . 36
+8.3 Screenshot of the main prediction interface with key components labeled . . . . 36
+8.4 Screenshot showing various analytics visualizations and controls . . . . . . . . 37
+8.5 Screenshot of the administrative interface with key sections highlighted . . . . 37
+8.6 Diagram showing the relationship between different services . . . . . . . . . . 37
+8.7 Flowchart of the authentication process and security measures . . . . . . . . . 38
+8.8 Diagram showing the prediction workflow from input to result . . . . . . . . . 38
+8.9 Flowchart showing the analytics processing pipeline . . . . . . . . . . . . . . . 38
+8.10 Diagram showing the data flow and storage architecture . . . . . . . . . . . . . 39
+8.11 Entity relationship diagram showing the database schema . . . . . . . . . . . . 39
+8.12 Diagram showing security measures and data protection . . . . . . . . . . . . . 39
+8.13 Flowchart showing the model lifecycle . . . . . . . . . . . . . . . . . . . . . . 40
+8.14 Architecture diagram of the prediction engine . . . . . . . . . . . . . . . . . . 40
+8.15 Diagram showing model versioning and deployment . . . . . . . . . . . . . . 40
+8.16 Diagram showing weather data integration . . . . . . . . . . . . . . . . . . . . 41
+8.17 Architecture diagram showing external data integration . . . . . . . . . . . . . 41
+8.18 Diagram showing third-party API integration architecture . . . . . . . . . . . . 42
+8.19 Complete system architecture diagram showing all layers and their interactions 42
+9.1 Load Balancing Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+9.2 Caching Strategy Implementation . . . . . . . . . . . . . . . . . . . . . . . . 45
+9.3 Resource Optimization Framework . . . . . . . . . . . . . . . . . . . . . . . . 46
+
+10.2 Sequence Diagram: Step-by-step prediction workflow . . . . . . . . . . . . . . 49
+19.1 User Registration and Authentication System Overview . . . . . . . . . . . . . 69
+19.2 Crop Yield Prediction System Architecture . . . . . . . . . . . . . . . . . . . 70

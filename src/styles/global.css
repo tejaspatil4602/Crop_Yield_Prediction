@@ -1,0 +1,98 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap');
+
+/* Global color variables */
+:root {
+  --primary-green: #2E7D32;
+  --secondary-green: #66BB6A;
+  --earthy-brown: #8D6E63;
+  --soft-beige: #F5F5DC;
+  --pure-white: #FFFFFF;
+  --deep-gray: #37474F;
+  --gradient-green: linear-gradient(135deg, #2E7D32, #66BB6A);
+  --gradient-dark: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%);
+}
+
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--deep-gray);
+  background-color: var(--pure-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--primary-green);
+}
+
+/* Common component styles */
+.card {
+  background: var(--pure-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styles */
+.btn {
+  background: var(--gradient-green);
+  color: var(--pure-white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+}
+
+/* Input field styles */
+.input-field {
+  border: 2px solid var(--secondary-green);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: 'Open Sans', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.2);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+}

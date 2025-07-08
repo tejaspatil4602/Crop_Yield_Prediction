@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+    
+    <!-- Boxes -->
+    <!-- Data Collection Stage -->
+    <rect x="50" y="50" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="130" y="85" text-anchor="middle" font-family="Arial" font-size="14">Initial Data Collection</text>
+    <text x="130" y="105" text-anchor="middle" font-family="Arial" font-size="12">- Form Validation</text>
+    <text x="130" y="125" text-anchor="middle" font-family="Arial" font-size="12">- Data Enrichment</text>
+    
+    <!-- Validation Stage -->
+    <rect x="320" y="50" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="400" y="85" text-anchor="middle" font-family="Arial" font-size="14">Data Validation</text>
+    <text x="400" y="105" text-anchor="middle" font-family="Arial" font-size="12">- Schema Validation</text>
+    <text x="400" y="125" text-anchor="middle" font-family="Arial" font-size="12">- Business Rules</text>
+    
+    <!-- Preprocessing Stage -->
+    <rect x="590" y="50" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="670" y="85" text-anchor="middle" font-family="Arial" font-size="14">Preprocessing</text>
+    <text x="670" y="105" text-anchor="middle" font-family="Arial" font-size="12">- Data Normalization</text>
+    <text x="670" y="125" text-anchor="middle" font-family="Arial" font-size="12">- Feature Engineering</text>
+    
+    <!-- Model Selection Stage -->
+    <rect x="590" y="250" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="670" y="285" text-anchor="middle" font-family="Arial" font-size="14">Model Selection</text>
+    <text x="670" y="305" text-anchor="middle" font-family="Arial" font-size="12">- Context Analysis</text>
+    <text x="670" y="325" text-anchor="middle" font-family="Arial" font-size="12">- Model Preparation</text>
+    
+    <!-- Prediction Stage -->
+    <rect x="320" y="250" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="400" y="285" text-anchor="middle" font-family="Arial" font-size="14">Prediction</text>
+    <text x="400" y="305" text-anchor="middle" font-family="Arial" font-size="12">- Model Execution</text>
+    <text x="400" y="325" text-anchor="middle" font-family="Arial" font-size="12">- Result Generation</text>
+    
+    <!-- Visualization Stage -->
+    <rect x="50" y="250" width="160" height="100" stroke="black" fill="white" stroke-width="2"/>
+    <text x="130" y="285" text-anchor="middle" font-family="Arial" font-size="14">Visualization</text>
+    <text x="130" y="305" text-anchor="middle" font-family="Arial" font-size="12">- Chart Generation</text>
+    <text x="130" y="325" text-anchor="middle" font-family="Arial" font-size="12">- Data Display</text>
+    
+    <!-- Arrows -->
+    <line x1="210" y1="100" x2="320" y2="100" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="480" y1="100" x2="590" y2="100" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="670" y1="150" x2="670" y2="250" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="590" y1="300" x2="480" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="320" y1="300" x2="210" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Title -->
+    <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Analytics Processing Pipeline</text>
+</svg>

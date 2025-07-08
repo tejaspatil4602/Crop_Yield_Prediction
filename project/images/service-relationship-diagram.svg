@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- UI Layer -->
+    <g transform="translate(50,50)">
+        <rect x="0" y="0" width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="55" text-anchor="middle" font-family="Arial">
+            User Interface Layer
+            <tspan x="100" y="75" font-size="14">(Web/Mobile)</tspan>
+        </text>
+    </g>
+
+    <!-- Application Layer -->
+    <g transform="translate(350,50)">
+        <rect x="0" y="0" width="400" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="200" y="35" text-anchor="middle" font-family="Arial">Application Layer</text>
+        
+        <!-- Services -->
+        <rect x="20" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="70" y="70" text-anchor="middle" font-size="12">Auth Service</text>
+        
+        <rect x="150" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="200" y="70" text-anchor="middle" font-size="12">Prediction Service</text>
+        
+        <rect x="280" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="330" y="70" text-anchor="middle" font-size="12">Analytics Service</text>
+    </g>
+
+    <!-- Data Layer -->
+    <g transform="translate(350,250)">
+        <rect x="0" y="0" width="400" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="200" y="35" text-anchor="middle" font-family="Arial">Data Layer</text>
+        
+        <!-- Databases -->
+        <rect x="20" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="70" y="70" text-anchor="middle" font-size="12">User DB</text>
+        
+        <rect x="150" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="200" y="70" text-anchor="middle" font-size="12">Prediction DB</text>
+        
+        <rect x="280" y="45" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+        <text x="330" y="70" text-anchor="middle" font-size="12">Analytics DB</text>
+    </g>
+
+    <!-- External Services -->
+    <g transform="translate(50,250)">
+        <rect x="0" y="0" width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="55" text-anchor="middle" font-family="Arial">
+            External Services
+            <tspan x="100" y="75" font-size="14">(APIs/Integrations)</tspan>
+        </text>
+    </g>
+
+    <!-- Arrows -->
+    <!-- UI to Application Layer -->
+    <g fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)">
+        <!-- Define arrowhead marker -->
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+            </marker>
+        </defs>
+        
+        <!-- UI to Application Layer -->
+        <path d="M 250,100 L 350,100"/>
+        
+        <!-- External Services to Application Layer -->
+        <path d="M 250,300 L 350,300"/>
+        
+        <!-- Application Layer to Data Layer -->
+        <path d="M 370,150 L 370,250"/>
+        <path d="M 500,150 L 500,250"/>
+        <path d="M 630,150 L 630,250"/>
+        
+        <!-- Bidirectional arrows between UI and Application -->
+        <path d="M 350,80 L 250,80" marker-end="url(#arrowhead)"/>
+        <path d="M 250,120 L 350,120" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(50,400)">
+        <text x="0" y="0" font-family="Arial" font-size="14" font-weight="bold">Legend:</text>
+        <line x1="0" y1="20" x2="30" y2="20" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="40" y="25" font-family="Arial" font-size="12">Data Flow Direction</text>
+    </g>
+</svg>

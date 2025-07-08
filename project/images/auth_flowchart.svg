@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="1200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <style>
+        .box { fill: white; stroke: black; stroke-width: 2; }
+        .arrow { stroke: black; stroke-width: 2; marker-end: url(#arrowhead); }
+        .text { font-family: Arial; font-size: 14px; text-anchor: middle; }
+        .decision { fill: white; stroke: black; stroke-width: 2; }
+    </style>
+
+    <!-- Arrow marker definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+
+    <!-- Title -->
+    <text x="400" y="40" class="text" font-size="20" font-weight="bold">Authentication Process Flow</text>
+
+    <!-- Start -->
+    <ellipse cx="400" cy="80" rx="60" ry="30" class="box"/>
+    <text x="400" y="85" class="text">Start</text>
+
+    <!-- User/Admin Choice -->
+    <path d="M 300,140 L 500,140 L 400,200 Z" class="decision"/>
+    <text x="400" y="170" class="text">User or Admin?</text>
+
+    <!-- User Registration -->
+    <rect x="100" y="240" width="160" height="60" class="box"/>
+    <text x="180" y="275" class="text">User Registration</text>
+
+    <!-- User Login -->
+    <rect x="320" y="240" width="160" height="60" class="box"/>
+    <text x="400" y="275" class="text">User Login</text>
+
+    <!-- Admin Login -->
+    <rect x="540" y="240" width="160" height="60" class="box"/>
+    <text x="620" y="275" class="text">Admin Login</text>
+
+    <!-- Input Validation -->
+    <rect x="320" y="340" width="160" height="60" class="box"/>
+    <text x="400" y="375" class="text">Input Validation</text>
+
+    <!-- Credential Check -->
+    <path d="M 300,440 L 500,440 L 400,500 Z" class="decision"/>
+    <text x="400" y="470" class="text">Valid Credentials?</text>
+
+    <!-- Password Hashing -->
+    <rect x="320" y="540" width="160" height="60" class="box"/>
+    <text x="400" y="575" class="text">Password Hashing</text>
+
+    <!-- JWT Generation -->
+    <rect x="320" y="640" width="160" height="60" class="box"/>
+    <text x="400" y="675" class="text">JWT Generation</text>
+
+    <!-- Session Management -->
+    <rect x="320" y="740" width="160" height="60" class="box"/>
+    <text x="400" y="775" class="text">Session Management</text>
+
+    <!-- Access Control -->
+    <rect x="320" y="840" width="160" height="60" class="box"/>
+    <text x="400" y="875" class="text">Access Control</text>
+
+    <!-- Error Handling -->
+    <rect x="540" y="440" width="160" height="60" class="box"/>
+    <text x="620" y="475" class="text">Error Handling</text>
+
+    <!-- End Success -->
+    <ellipse cx="400" cy="960" rx="60" ry="30" class="box"/>
+    <text x="400" y="965" class="text">Success</text>
+
+    <!-- Connecting Arrows -->
+    <line x1="400" y1="110" x2="400" y2="140" class="arrow"/>
+    <line x1="400" y1="200" x2="180" y2="240" class="arrow"/>
+    <line x1="400" y1="200" x2="400" y2="240" class="arrow"/>
+    <line x1="400" y1="200" x2="620" y2="240" class="arrow"/>
+    <line x1="180" y1="300" x2="400" y2="340" class="arrow"/>
+    <line x1="400" y1="300" x2="400" y2="340" class="arrow"/>
+    <line x1="620" y1="300" x2="400" y2="340" class="arrow"/>
+    <line x1="400" y1="400" x2="400" y2="440" class="arrow"/>
+    <line x1="400" y1="500" x2="400" y2="540" class="arrow"/>
+    <line x1="400" y1="600" x2="400" y2="640" class="arrow"/>
+    <line x1="400" y1="700" x2="400" y2="740" class="arrow"/>
+    <line x1="400" y1="800" x2="400" y2="840" class="arrow"/>
+    <line x1="400" y1="900" x2="400" y2="930" class="arrow"/>
+    <line x1="500" y1="470" x2="540" y2="470" class="arrow"/>
+
+    <!-- Labels -->
+    <text x="320" y="160" class="text">User</text>
+    <text x="480" y="160" class="text">Admin</text>
+    <text x="520" y="450" class="text">Invalid</text>
+    <text x="400" y="520" class="text">Valid</text>
+</svg>

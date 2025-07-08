@@ -1,0 +1,40 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" font-size="24" text-anchor="middle">Multi-Level Caching Strategy</text>
+  
+  <!-- Client-Side Cache -->
+  <rect x="100" y="100" width="200" height="100" fill="#a6cee3" stroke="#1f78b4"/>
+  <text x="200" y="160" text-anchor="middle">Client-Side Cache</text>
+  
+  <!-- Application Layer Cache -->
+  <rect x="350" y="100" width="200" height="100" fill="#b2df8a" stroke="#33a02c"/>
+  <text x="450" y="160" text-anchor="middle">Application Cache</text>
+  
+  <!-- Database Cache -->
+  <rect x="600" y="100" width="200" height="100" fill="#fb9a99" stroke="#e31a1c"/>
+  <text x="700" y="160" text-anchor="middle">Database Cache</text>
+  
+  <!-- Data Flow Arrows -->
+  <line x1="300" y1="150" x2="350" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="550" y1="150" x2="600" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Cache Warming -->
+  <path d="M 450 200 L 450 250 L 150 250 L 150 300" stroke="#ff7f00" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="300" y="280" text-anchor="middle">Cache Warming</text>
+  
+  <!-- Invalidation -->
+  <path d="M 450 200 L 450 250 L 750 250 L 750 300" stroke="#6a3d9a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="600" y="280" text-anchor="middle">Invalidation</text>
+  
+  <!-- Distribution -->
+  <path d="M 450 200 L 450 350 L 200 400" stroke="#e31a1c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 450 350 L 700 400" stroke="#e31a1c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="450" y="380" text-anchor="middle">Distribution</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

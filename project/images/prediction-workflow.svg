@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <style>
+        .box { fill: white; stroke: black; stroke-width: 2; }
+        .arrow { stroke: black; stroke-width: 2; marker-end: url(#arrowhead); }
+        .label { font-family: Arial; font-size: 14px; text-anchor: middle; }
+        .process-title { font-family: Arial; font-size: 16px; font-weight: bold; text-anchor: middle; }
+    </style>
+
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+
+    <!-- Input Processing -->
+    <rect class="box" x="50" y="50" width="160" height="100" rx="10"/>
+    <text class="process-title" x="130" y="80">Input Processing</text>
+    <text class="label" x="130" y="100">• Form Validation</text>
+    <text class="label" x="130" y="120">• Data Enrichment</text>
+    <text class="label" x="130" y="140">• Request Preparation</text>
+
+    <!-- Data Validation & Preprocessing -->
+    <rect class="box" x="320" y="50" width="160" height="100" rx="10"/>
+    <text class="process-title" x="400" y="80">Data Validation</text>
+    <text class="label" x="400" y="100">• Schema Validation</text>
+    <text class="label" x="400" y="120">• Data Normalization</text>
+    <text class="label" x="400" y="140">• Feature Engineering</text>
+
+    <!-- Model Prediction -->
+    <rect class="box" x="320" y="250" width="160" height="100" rx="10"/>
+    <text class="process-title" x="400" y="280">Model Prediction</text>
+    <text class="label" x="400" y="300">• Model Selection</text>
+    <text class="label" x="400" y="320">• Feature Processing</text>
+    <text class="label" x="400" y="340">• Inference</text>
+
+    <!-- Results Processing -->
+    <rect class="box" x="320" y="450" width="160" height="100" rx="10"/>
+    <text class="process-title" x="400" y="480">Results Processing</text>
+    <text class="label" x="400" y="500">• Result Validation</text>
+    <text class="label" x="400" y="520">• Data Formatting</text>
+    <text class="label" x="400" y="540">• Visualization Prep</text>
+
+    <!-- Output Display -->
+    <rect class="box" x="590" y="450" width="160" height="100" rx="10"/>
+    <text class="process-title" x="670" y="480">Output Display</text>
+    <text class="label" x="670" y="500">• Visual Presentation</text>
+    <text class="label" x="670" y="520">• Interactive Elements</text>
+    <text class="label" x="670" y="540">• Response Delivery</text>
+
+    <!-- Connecting Arrows -->
+    <path class="arrow" d="M210 100 H320"/>
+    <path class="arrow" d="M400 150 V250"/>
+    <path class="arrow" d="M400 350 V450"/>
+    <path class="arrow" d="M480 500 H590"/>
+
+    <!-- Flow Labels -->
+    <text class="label" x="265" y="90">Validate</text>
+    <text class="label" x="420" y="200">Process</text>
+    <text class="label" x="420" y="400">Analyze</text>
+    <text class="label" x="535" y="490">Display</text>
+</svg>

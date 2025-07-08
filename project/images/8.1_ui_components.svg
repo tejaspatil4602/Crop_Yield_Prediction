@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header Section -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="700" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="350" y="35" text-anchor="middle" font-family="Arial" font-weight="bold">Header Navigation</text>
+    <!-- Navigation Items -->
+    <line x1="150" y1="0" x2="150" y2="60" stroke="black" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="60" stroke="black" stroke-width="1"/>
+    <line x1="450" y1="0" x2="450" y2="60" stroke="black" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="60" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Sidebar -->
+  <g transform="translate(50,130)">
+    <rect x="0" y="0" width="150" height="400" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Sidebar Menu</text>
+    <!-- Menu Items -->
+    <line x1="20" y1="50" x2="130" y2="50" stroke="black" stroke-width="1"/>
+    <line x1="20" y1="100" x2="130" y2="100" stroke="black" stroke-width="1"/>
+    <line x1="20" y1="150" x2="130" y2="150" stroke="black" stroke-width="1"/>
+    <line x1="20" y1="200" x2="130" y2="200" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Main Content Area -->
+  <g transform="translate(220,130)">
+    <rect x="0" y="0" width="530" height="400" fill="white" stroke="black" stroke-width="2"/>
+    <text x="265" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Main Content Area</text>
+    
+    <!-- Content Sections -->
+    <g transform="translate(20,60)">
+      <!-- Data Input Section -->
+      <rect x="0" y="0" width="230" height="150" fill="white" stroke="black" stroke-width="1"/>
+      <text x="115" y="20" text-anchor="middle" font-family="Arial">Data Input Forms</text>
+      
+      <!-- Visualization Section -->
+      <rect x="260" y="0" width="230" height="150" fill="white" stroke="black" stroke-width="1"/>
+      <text x="375" y="20" text-anchor="middle" font-family="Arial">Data Visualization</text>
+      
+      <!-- Results Section -->
+      <rect x="0" y="180" width="490" height="140" fill="white" stroke="black" stroke-width="1"/>
+      <text x="245" y="200" text-anchor="middle" font-family="Arial">Results Display</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(50,550)">
+    <rect x="0" y="0" width="700" height="40" fill="white" stroke="black" stroke-width="2"/>
+    <text x="350" y="25" text-anchor="middle" font-family="Arial">Footer Content</text>
+  </g>
+
+  <!-- Component Relationships -->
+  <g stroke="black" stroke-width="1" stroke-dasharray="5,5">
+    <!-- Header to Content -->
+    <path d="M400,110 L400,130" fill="none" stroke="black" stroke-width="1"/>
+    
+    <!-- Sidebar to Content -->
+    <path d="M200,330 L220,330" fill="none" stroke="black" stroke-width="1"/>
+    
+    <!-- Content to Footer -->
+    <path d="M400,530 L400,550" fill="none" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="Arial" font-size="12">
+    <text x="30" y="30" font-weight="bold">UI Component Layout</text>
+  </g>
+</svg>

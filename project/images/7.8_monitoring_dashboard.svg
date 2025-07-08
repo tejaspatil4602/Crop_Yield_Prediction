@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashboard Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">System Monitoring Dashboard</text>
+
+  <!-- System Health Panel -->
+  <g transform="translate(50,80)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">System Health</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">CPU Usage</text>
+    <rect x="30" y="90" width="140" height="20" fill="white" stroke="black" stroke-width="1"/>
+    <text x="30" y="130" font-family="Arial">Memory Usage</text>
+    <rect x="30" y="140" width="140" height="20" fill="white" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- API Performance Panel -->
+  <g transform="translate(300,80)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">API Performance</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">Response Time</text>
+    <path d="M30,110 L170,110" stroke="black" stroke-width="1" stroke-dasharray="2,2"/>
+    <path d="M30,110 Q70,90 100,100 T170,80" fill="none" stroke="black" stroke-width="2"/>
+  </g>
+
+  <!-- Error Rates Panel -->
+  <g transform="translate(550,80)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Error Rates</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">4xx Errors</text>
+    <text x="30" y="110" font-family="Arial">5xx Errors</text>
+    <rect x="100" y="70" width="70" height="15" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="100" y="100" width="70" height="15" fill="white" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- User Activity Panel -->
+  <g transform="translate(50,280)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">User Activity</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">Active Users</text>
+    <text x="30" y="110" font-family="Arial">Sessions</text>
+    <path d="M100,70 L100,130 M30,100 L170,100" stroke="black" stroke-width="1"/>
+    <circle cx="100" cy="100" r="30" fill="none" stroke="black" stroke-width="2"/>
+  </g>
+
+  <!-- Prediction Metrics Panel -->
+  <g transform="translate(300,280)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Prediction Metrics</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">Accuracy</text>
+    <text x="30" y="110" font-family="Arial">Latency</text>
+    <rect x="100" y="70" width="70" height="15" fill="white" stroke="black" stroke-width="1"/>
+    <rect x="100" y="100" width="70" height="15" fill="white" stroke="black" stroke-width="1"/>
+  </g>
+
+  <!-- Resource Usage Panel -->
+  <g transform="translate(550,280)">
+    <rect x="0" y="0" width="200" height="150" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">Resource Usage</text>
+    <line x1="20" y1="50" x2="180" y2="50" stroke="black" stroke-width="1"/>
+    <text x="30" y="80" font-family="Arial">Disk Space</text>
+    <text x="30" y="110" font-family="Arial">Network</text>
+    <rect x="100" y="70" width="70" height="15" fill="white" stroke="black" stroke-width="1"/>
+    <path d="M100,100 L170,100" stroke="black" stroke-width="2"/>
+  </g>
+
+  <!-- Time Series Panel -->
+  <g transform="translate(50,480)">
+    <rect x="0" y="0" width="700" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="350" y="30" text-anchor="middle" font-family="Arial" font-weight="bold">System Performance Over Time</text>
+    <line x1="50" y1="50" x2="650" y2="50" stroke="black" stroke-width="1"/>
+    <path d="M50,80 Q200,60 350,70 T650,50" fill="none" stroke="black" stroke-width="2"/>
+  </g>
+</svg>

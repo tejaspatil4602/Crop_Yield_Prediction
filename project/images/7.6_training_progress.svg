@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Coordinate System -->
+  <g transform="translate(50,50)">
+    <!-- Y-axis -->
+    <line x1="50" y1="500" x2="50" y2="0" stroke="black" stroke-width="2"/>
+    <!-- X-axis -->
+    <line x1="50" y1="500" x2="700" y2="500" stroke="black" stroke-width="2"/>
+    
+    <!-- Axis Labels -->
+    <text x="375" y="550" text-anchor="middle" font-family="Arial">Training Epochs</text>
+    <text x="30" y="250" text-anchor="middle" font-family="Arial" transform="rotate(-90,30,250)">Loss / Accuracy</text>
+    
+    <!-- Grid Lines -->
+    <g stroke="black" stroke-width="0.5" stroke-dasharray="5,5">
+      <!-- Horizontal Grid Lines -->
+      <line x1="50" y1="400" x2="700" y2="400"/>
+      <line x1="50" y1="300" x2="700" y2="300"/>
+      <line x1="50" y1="200" x2="700" y2="200"/>
+      <line x1="50" y1="100" x2="700" y2="100"/>
+      
+      <!-- Vertical Grid Lines -->
+      <line x1="180" y1="0" x2="180" y2="500"/>
+      <line x1="310" y1="0" x2="310" y2="500"/>
+      <line x1="440" y1="0" x2="440" y2="500"/>
+      <line x1="570" y1="0" x2="570" y2="500"/>
+    </g>
+    
+    <!-- Training Loss Curve -->
+    <path d="M50,450 Q180,350 310,250 T570,100" fill="none" stroke="black" stroke-width="2"/>
+    
+    <!-- Validation Loss Curve -->
+    <path d="M50,470 Q180,380 310,280 T570,150" fill="none" stroke="black" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Accuracy Curve -->
+    <path d="M50,400 Q180,300 310,200 T570,50" fill="none" stroke="black" stroke-width="2" stroke-dasharray="10,10"/>
+    
+    <!-- Legend -->
+    <g transform="translate(550,50)">
+      <rect width="140" height="80" fill="white" stroke="black" stroke-width="1"/>
+      
+      <!-- Training Loss -->
+      <line x1="10" y1="20" x2="40" y2="20" stroke="black" stroke-width="2"/>
+      <text x="50" y="25" font-family="Arial" font-size="12">Training Loss</text>
+      
+      <!-- Validation Loss -->
+      <line x1="10" y1="40" x2="40" y2="40" stroke="black" stroke-width="2" stroke-dasharray="5,5"/>
+      <text x="50" y="45" font-family="Arial" font-size="12">Validation Loss</text>
+      
+      <!-- Accuracy -->
+      <line x1="10" y1="60" x2="40" y2="60" stroke="black" stroke-width="2" stroke-dasharray="10,10"/>
+      <text x="50" y="65" font-family="Arial" font-size="12">Accuracy</text>
+    </g>
+  </g>
+</svg>

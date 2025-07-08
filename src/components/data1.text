@@ -1,0 +1,250 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { GoogleGenerativeAI } from '@google/generative-ai';
+import { Avatar, IconButton, Button, Box, Typography } from '@mui/material';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import SendIcon from '@mui/icons-material/Send';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import './AIChat.css';
+
+export default function AIChat() {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(() => {
+    const savedState = localStorage.getItem('chat_minimized');
+    return savedState ? JSON.parse(savedState) : false;
+  });
+  const chatContainerRef = useRef(null);
+  
+
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const genAI = new GoogleGenerativeAI(apiKey);
+
+  const clearChat = () => {
+    setMessages([]);
+    localStorage.removeItem('chat_history');
+  };
+
+  useEffect(() => {
+    // Load chat history from localStorage
+    const savedHistory = localStorage.getItem('chat_history');
+    if (savedHistory) {
+      setMessages(JSON.parse(savedHistory));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save chat history to localStorage
+    localStorage.setItem('chat_history', JSON.stringify(messages));
+    
+    // Scroll to bottom when messages update
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  useEffect(() => {
+    // Save minimized state to localStorage
+    localStorage.setItem('chat_minimized', JSON.stringify(isMinimized));
+  }, [isMinimized]);
+
+  
+
+  const formatMessagesContext = (messages) => {
+    return messages.map(msg => `${msg.role}: ${msg.content}`).join('\n');
+  };
+
+  const handleSend = async (e) => {
+    e.preventDefault(); // Prevent form submission from refreshing the page
+    
+    if (!input.trim()) return;
+    setIsLoading(true);
+
+    try {
+      const userMessage = { role: 'user', content: input };
+      setMessages(prev => [...prev, userMessage]);
+      setInput('');
+
+      // Generate AI response using the Gemini API client
+      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+      
+      const prompt = `You are a helpful AI assistant focused on agricultural and farming topics. Please provide thoughtful, comprehensive responses to the user's questions while maintaining natural conversation flow.
+
+Previous conversation:
+${formatMessagesContext(messages)}
+
+Current message: ${input}
+
+Respond in a clear, friendly manner using proper Markdown formatting when appropriate.`;
+
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+      
+      let messageContent = text;
+
+      const assistantMessage = { 
+        role: 'assistant', 
+        content: messageContent
+      };
+      setMessages(prev => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error('Error in chat:', error);
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: "I apologize, but I encountered an error. Please try again." 
+      }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className={`fixed bottom-4 right-4 flex flex-col ${isMinimized ? 'chat-button' : 'chat-container bg-white/80 backdrop-blur-xl rounded-xl shadow-2xl border border-blue-200/50 overflow-hidden'} chat-transition`}
+      style={{
+        width: isMinimized ? '60px' : '400px',
+        maxWidth: '95vw',
+        height: isMinimized ? '60px' : '600px',
+        maxHeight: '90vh',
+        zIndex: 1000,
+        transform: `scale(${isMinimized ? 0.9 : 1})`,
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+      }}
+    >
+      <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-500/90 via-blue-600/90 to-blue-700/90 backdrop-blur-md text-white border-b border-blue-300/30">
+        <div className="flex items-center flex-grow">
+          <Avatar
+            src="/ai-avatar.svg"
+            alt="AI Assistant"
+            sx={{
+              width: isMinimized ? 32 : 40,
+              height: isMinimized ? 32 : 40,
+              marginRight: 2,
+              border: '2px solid white',
+              transition: 'all 0.3s ease-in-out',
+              backgroundColor: 'transparent'
+            }}
+            className={!isMinimized ? 'avatar-pulse' : ''}
+          />
+          {!isMinimized && (
+            <div className="animate-fade-in">
+              <Typography variant="subtitle1" className="font-semibold">AI Farm Assistant</Typography>
+              <Typography variant="caption" className="opacity-80">We typically reply in few minutes</Typography>
+            </div>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
+          {!isMinimized && (
+            <button
+              onClick={clearChat}
+              className="p-2 text-sm bg-red-500/90 hover:bg-red-600 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
+              Clear
+            </button>
+          )}
+          <button
+            onClick={() => setIsMinimized(!isMinimized)}
+            className="p-2 hover:bg-blue-800/80 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+          >
+            {isMinimized ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 animate-bounce" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transition-transform duration-300 hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+      <div 
+        ref={chatContainerRef}
+        className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50"
+        style={{ display: isMinimized ? 'none' : 'block' }}
+      >
+        {messages.length === 0 && (
+          <div className="text-center bg-white rounded-xl p-8 shadow-md">
+            <Typography variant="h5" className="font-semibold mb-4">👋 Welcome to AI Farm Assistant!</Typography>
+            <Typography variant="body1" className="text-gray-600 mb-6">
+              I'm here to help you with farming advice, crop management, and agricultural insights.
+            </Typography>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button variant="outlined" size="large" color="primary" className="rounded-full">
+                Weather Analysis
+              </Button>
+              <Button variant="outlined" size="large" color="primary" className="rounded-full">
+                Crop Planning
+              </Button>
+              <Button variant="outlined" size="large" color="primary" className="rounded-full">
+                Pest Control
+              </Button>
+            </div>
+          </div>
+        )}
+        {messages.map((message, index) => (
+          <div
+            key={index}
+            className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
+          >
+            <div
+              className={`max-w-[80%] rounded-2xl p-3 ${
+                message.role === 'user' 
+                  ? 'bg-blue-500 text-white ml-auto' 
+                  : 'bg-white text-gray-800 shadow-lg border border-gray-100'
+              }`}
+            >
+              <div className="whitespace-pre-wrap text-[14px] leading-relaxed">{message.content}</div>
+              {message.role === 'assistant' && (
+                <div className="flex items-center mt-2 pt-2 border-t border-gray-100 gap-2">
+                  <button className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200">
+                    <ThumbUpIcon fontSize="small" className="text-gray-500" />
+                  </button>
+                  <button className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200">
+                    <ThumbDownIcon fontSize="small" className="text-gray-500" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+        {isLoading && (
+          <div className="flex justify-center p-4">
+            <div className="animate-pulse flex space-x-3">
+              <div className="h-2 w-2 bg-blue-400 rounded-full"></div>
+              <div className="h-2 w-2 bg-blue-400 rounded-full"></div>
+              <div className="h-2 w-2 bg-blue-400 rounded-full"></div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="p-3 bg-white/90 backdrop-blur-sm border-t border-gray-100/50 shadow-lg">
+        <form onSubmit={handleSend} className="flex items-center gap-3 bg-white/90 backdrop-blur-md rounded-full px-4 py-3 hover:shadow-xl transition-all duration-300 border border-blue-100/30">
+          <button type="button" className="text-gray-500 hover:text-gray-700 transition-colors hover:scale-110 duration-300">
+            <AttachFileIcon fontSize="small" />
+          </button>
+          <button type="button" className="text-gray-500 hover:text-gray-700 transition-colors hover:scale-110 duration-300">
+            <EmojiEmotionsIcon fontSize="small" />
+          </button>
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type your message..."
+            className="flex-1 bg-transparent border-none focus:outline-none text-gray-800 placeholder-gray-500"
+          />
+          <button
+            type="submit"
+            disabled={isLoading || !input.trim()}
+            className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-lg hover:scale-105 relative overflow-hidden group"
+          >
+            <SendIcon fontSize="small" className="transform group-hover:rotate-45 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};

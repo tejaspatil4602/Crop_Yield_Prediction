@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Client Layer -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial">Client Applications</text>
+  </g>
+
+  <!-- API Gateway -->
+  <g transform="translate(300,50)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">API Gateway</text>
+  </g>
+
+  <!-- Authentication Service -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial">Authentication Service</text>
+  </g>
+
+  <!-- Business Logic Layer -->
+  <g transform="translate(300,200)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Business Logic Layer</text>
+  </g>
+
+  <!-- Data Access Layer -->
+  <g transform="translate(300,350)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Data Access Layer</text>
+  </g>
+
+  <!-- Database -->
+  <g transform="translate(300,500)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Database</text>
+  </g>
+
+  <!-- Request Flow Arrows -->
+  <g>
+    <!-- Client to Gateway -->
+    <path d="M200,90 L300,90" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Gateway to Auth -->
+    <path d="M300,130 L200,200" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Auth to Gateway -->
+    <path d="M200,240 L300,130" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Gateway to Business Logic -->
+    <path d="M400,130 L400,200" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Business Logic to Data Access -->
+    <path d="M400,280 L400,350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Data Access to Database -->
+    <path d="M400,430 L400,500" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Response Flow Arrows -->
+  <g stroke-dasharray="5,5">
+    <!-- Database to Data Access -->
+    <path d="M500,500 L500,430" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Data Access to Business Logic -->
+    <path d="M500,350 L500,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Business Logic to Gateway -->
+    <path d="M500,200 L500,130" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Gateway to Client -->
+    <path d="M500,90 L600,90" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <g font-family="Arial" font-size="12">
+    <text x="250" y="70">Request</text>
+    <text x="520" y="70">Response</text>
+  </g>
+</svg>

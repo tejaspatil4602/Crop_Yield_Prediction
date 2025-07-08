@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800">
+  <rect x="10" y="10" width="200" height="100" fill="lightblue" stroke="black" />
+  <text x="20" y="60" font-family="Arial" font-size="14">Start</text>
+  <rect x="250" y="10" width="200" height="100" fill="lightgreen" stroke="black" />
+  <text x="260" y="60" font-family="Arial" font-size="14">Data Processing</text>
+  <rect x="490" y="10" width="200" height="100" fill="lightcoral" stroke="black" />
+  <text x="500" y="60" font-family="Arial" font-size="14">Model Training</text>
+  <rect x="730" y="10" width="200" height="100" fill="lightyellow" stroke="black" />
+  <text x="740" y="60" font-family="Arial" font-size="14">Prediction</text>
+  <line x1="210" y1="60" x2="250" y2="60" stroke="black" marker-end="url(#arrow)" />
+  <line x1="450" y1="60" x2="490" y2="60" stroke="black" marker-end="url(#arrow)" />
+  <line x1="690" y1="60" x2="730" y2="60" stroke="black" marker-end="url(#arrow)" />
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="black" />
+    </marker>
+  </defs>
+</svg>

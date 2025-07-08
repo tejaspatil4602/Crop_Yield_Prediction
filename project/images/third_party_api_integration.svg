@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Third-Party API Integration Architecture</text>
+    
+    <!-- Third-Party APIs -->
+    <g transform="translate(50,100)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Weather</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">API</text>
+    </g>
+    
+    <g transform="translate(50,180)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Market Data</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">API</text>
+    </g>
+    
+    <g transform="translate(50,260)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Satellite</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">API</text>
+    </g>
+    
+    <!-- API Gateway -->
+    <g transform="translate(300,180)">
+        <rect width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="14">API Gateway</text>
+        <text x="100" y="55" text-anchor="middle" font-size="12">(Rate Limiting)</text>
+        <text x="100" y="75" text-anchor="middle" font-size="12">(Authentication)</text>
+    </g>
+    
+    <!-- Cache Layer -->
+    <g transform="translate(600,180)">
+        <rect width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Cache Layer</text>
+        <text x="75" y="65" text-anchor="middle" font-size="12">(Redis)</text>
+    </g>
+    
+    <!-- Data Transformation -->
+    <g transform="translate(300,380)">
+        <rect width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="45" text-anchor="middle" font-size="14">Data</text>
+        <text x="100" y="65" text-anchor="middle" font-size="14">Transformation</text>
+    </g>
+    
+    <!-- Application Services -->
+    <g transform="translate(600,380)">
+        <rect width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Application</text>
+        <text x="75" y="65" text-anchor="middle" font-size="14">Services</text>
+    </g>
+    
+    <!-- Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+    
+    <!-- APIs to Gateway -->
+    <line x1="200" y1="130" x2="300" y2="200" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="210" x2="300" y2="210" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="290" x2="300" y2="240" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Gateway to Cache -->
+    <line x1="500" y1="230" x2="600" y2="230" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="550" y="220" text-anchor="middle" font-size="12">Cache Check</text>
+    
+    <!-- Gateway to Transformation -->
+    <line x1="400" y1="280" x2="400" y2="380" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="420" y="330" text-anchor="middle" font-size="12">Raw Data</text>
+    
+    <!-- Cache to Services -->
+    <line x1="675" y1="280" x2="675" y2="380" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="695" y="330" text-anchor="middle" font-size="12">Cached
+Data</text>
+    
+    <!-- Transformation to Services -->
+    <line x1="500" y1="430" x2="600" y2="430" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="550" y="420" text-anchor="middle" font-size="12">Processed
+Data</text>
+</svg>

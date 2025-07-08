@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <defs>
+        <style type="text/css">
+            .box { fill: white; stroke: black; stroke-width: 2; }
+            .arrow { stroke: black; stroke-width: 2; marker-end: url(#arrowhead); }
+            .text { font-family: Arial; font-size: 14px; text-anchor: middle; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+
+    <!-- Development Phase -->
+    <rect class="box" x="50" y="50" width="120" height="60" rx="5"/>
+    <text class="text" x="110" y="85">Model Development</text>
+
+    <!-- Data Preparation -->
+    <rect class="box" x="250" y="50" width="120" height="60" rx="5"/>
+    <text class="text" x="310" y="85">Data Preparation</text>
+
+    <!-- Training Phase -->
+    <rect class="box" x="450" y="50" width="120" height="60" rx="5"/>
+    <text class="text" x="510" y="85">Model Training</text>
+
+    <!-- Validation Phase -->
+    <rect class="box" x="650" y="50" width="120" height="60" rx="5"/>
+    <text class="text" x="710" y="85">Validation</text>
+
+    <!-- Deployment Phase -->
+    <rect class="box" x="650" y="200" width="120" height="60" rx="5"/>
+    <text class="text" x="710" y="235">Deployment</text>
+
+    <!-- Monitoring Phase -->
+    <rect class="box" x="450" y="200" width="120" height="60" rx="5"/>
+    <text class="text" x="510" y="235">Monitoring</text>
+
+    <!-- Maintenance Phase -->
+    <rect class="box" x="250" y="200" width="120" height="60" rx="5"/>
+    <text class="text" x="310" y="235">Maintenance</text>
+
+    <!-- Version Control -->
+    <rect class="box" x="50" y="200" width="120" height="60" rx="5"/>
+    <text class="text" x="110" y="235">Version Control</text>
+
+    <!-- Arrows -->
+    <path class="arrow" d="M170 80 H250"/>
+    <path class="arrow" d="M370 80 H450"/>
+    <path class="arrow" d="M570 80 H650"/>
+    <path class="arrow" d="M710 110 V200"/>
+    <path class="arrow" d="M650 230 H570"/>
+    <path class="arrow" d="M450 230 H370"/>
+    <path class="arrow" d="M250 230 H170"/>
+    <path class="arrow" d="M110 200 V110"/>
+
+    <!-- Additional Details -->
+    <text class="text" x="200" y="60">→</text>
+    <text class="text" x="400" y="60">→</text>
+    <text class="text" x="600" y="60">→</text>
+    <text class="text" x="730" y="150">↓</text>
+    <text class="text" x="600" y="210">←</text>
+    <text class="text" x="400" y="210">←</text>
+    <text class="text" x="200" y="210">←</text>
+    <text class="text" x="90" y="150">↑</text>
+</svg>

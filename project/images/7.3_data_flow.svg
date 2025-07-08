@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Data Sources -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial">External Data Sources</text>
+  </g>
+
+  <!-- Data Integration Layer -->
+  <g transform="translate(300,50)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Data Integration Layer</text>
+  </g>
+
+  <!-- Data Storage -->
+  <g transform="translate(600,50)">
+    <rect x="0" y="0" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="45" text-anchor="middle" font-family="Arial">Data Storage</text>
+  </g>
+
+  <!-- Data Processing -->
+  <g transform="translate(300,200)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Data Processing</text>
+  </g>
+
+  <!-- Data Analysis -->
+  <g transform="translate(300,350)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Data Analysis</text>
+  </g>
+
+  <!-- Output Layer -->
+  <g transform="translate(300,500)">
+    <rect x="0" y="0" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" font-family="Arial">Output Layer</text>
+  </g>
+
+  <!-- Arrows -->
+  <!-- Sources to Integration -->
+  <path d="M200,90 L300,90" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Integration to Storage -->
+  <path d="M500,90 L600,90" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Integration to Processing -->
+  <path d="M400,130 L400,200" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Processing to Analysis -->
+  <path d="M400,280 L400,350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Analysis to Output -->
+  <path d="M400,430 L400,500" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>

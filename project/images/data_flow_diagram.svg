@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+        <style>
+            .process { fill: #fff; stroke: #333; stroke-width: 2; }
+            .storage { fill: #f0f0f0; stroke: #333; stroke-width: 2; }
+            .flow { stroke: #666; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+            .text { font-family: Arial; font-size: 14px; fill: #333; }
+            .layer-title { font-family: Arial; font-size: 16px; font-weight: bold; fill: #333; }
+        </style>
+    </defs>
+
+    <!-- UI Layer -->
+    <g transform="translate(50,50)">
+        <rect width="200" height="150" rx="10" class="process"/>
+        <text x="100" y="30" text-anchor="middle" class="layer-title">UI Layer</text>
+        <text x="100" y="60" text-anchor="middle" class="text">Authentication</text>
+        <text x="100" y="90" text-anchor="middle" class="text">Prediction Dashboard</text>
+        <text x="100" y="120" text-anchor="middle" class="text">Analytics Module</text>
+    </g>
+
+    <!-- Application Layer -->
+    <g transform="translate(400,50)">
+        <rect width="200" height="150" rx="10" class="process"/>
+        <text x="100" y="30" text-anchor="middle" class="layer-title">Application Layer</text>
+        <text x="100" y="60" text-anchor="middle" class="text">Auth Service</text>
+        <text x="100" y="90" text-anchor="middle" class="text">Prediction Service</text>
+        <text x="100" y="120" text-anchor="middle" class="text">Analytics Service</text>
+    </g>
+
+    <!-- Data Access Layer -->
+    <g transform="translate(400,300)">
+        <rect width="200" height="150" rx="10" class="process"/>
+        <text x="100" y="30" text-anchor="middle" class="layer-title">Data Access Layer</text>
+        <text x="100" y="60" text-anchor="middle" class="text">CRUD Operations</text>
+        <text x="100" y="90" text-anchor="middle" class="text">Data Models</text>
+        <text x="100" y="120" text-anchor="middle" class="text">Security</text>
+    </g>
+
+    <!-- ML Layer -->
+    <g transform="translate(750,300)">
+        <rect width="200" height="150" rx="10" class="process"/>
+        <text x="100" y="30" text-anchor="middle" class="layer-title">ML Layer</text>
+        <text x="100" y="60" text-anchor="middle" class="text">Model Management</text>
+        <text x="100" y="90" text-anchor="middle" class="text">Prediction Engine</text>
+        <text x="100" y="120" text-anchor="middle" class="text">Model Registry</text>
+    </g>
+
+    <!-- External Services Layer -->
+    <g transform="translate(750,50)">
+        <rect width="200" height="150" rx="10" class="process"/>
+        <text x="100" y="30" text-anchor="middle" class="layer-title">External Services</text>
+        <text x="100" y="60" text-anchor="middle" class="text">Weather Services</text>
+        <text x="100" y="90" text-anchor="middle" class="text">Data Providers</text>
+        <text x="100" y="120" text-anchor="middle" class="text">Third-party APIs</text>
+    </g>
+
+    <!-- Database -->
+    <g transform="translate(400,550)">
+        <path d="M0,30 C0,13 45,0 100,0 C155,0 200,13 200,30 L200,70 C200,87 155,100 100,100 C45,100 0,87 0,70 Z" class="storage"/>
+        <text x="100" y="50" text-anchor="middle" class="layer-title">Database</text>
+    </g>
+
+    <!-- Data Flow Arrows -->
+    <!-- UI to Application -->
+    <path d="M250,125 L400,125" class="flow"/>
+    <!-- Application to Data Access -->
+    <path d="M500,200 L500,300" class="flow"/>
+    <!-- Data Access to Database -->
+    <path d="M500,450 L500,550" class="flow"/>
+    <!-- Application to ML -->
+    <path d="M600,125 L750,375" class="flow"/>
+    <!-- Application to External -->
+    <path d="M600,125 L750,125" class="flow"/>
+    <!-- ML to Data Access -->
+    <path d="M750,375 L600,375" class="flow"/>
+
+    <!-- Legend -->
+    <g transform="translate(50,700)">
+        <text class="layer-title">Legend:</text>
+        <rect x="100" y="-20" width="20" height="20" class="process"/>
+        <text x="130" y="-5" class="text">Process/Layer</text>
+        <path d="M200,0 L240,0" class="flow"/>
+        <text x="250" y="-5" class="text">Data Flow</text>
+        <path d="M320,-10 C320,-18 345,-25 375,-25 C405,-25 430,-18 430,-10 L430,10 C430,18 405,25 375,25 C345,25 320,18 320,10 Z" class="storage"/>
+        <text x="450" y="-5" class="text">Data Store</text>
+    </g>
+</svg>

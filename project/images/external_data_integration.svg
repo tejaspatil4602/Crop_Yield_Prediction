@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">External Data Integration Architecture</text>
+    
+    <!-- External Data Sources -->
+    <g transform="translate(50,100)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Satellite</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Imagery</text>
+    </g>
+    
+    <g transform="translate(50,180)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Soil</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Data</text>
+    </g>
+    
+    <g transform="translate(50,260)">
+        <rect width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="25" text-anchor="middle" font-size="14">Historical</text>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Crop Data</text>
+    </g>
+    
+    <!-- Integration Layer -->
+    <g transform="translate(300,180)">
+        <rect width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="14">Data Integration</text>
+        <text x="100" y="55" text-anchor="middle" font-size="14">Layer</text>
+        <text x="100" y="75" text-anchor="middle" font-size="12">(ETL Processes)</text>
+    </g>
+    
+    <!-- Data Lake -->
+    <g transform="translate(600,180)">
+        <rect width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Data Lake</text>
+        <text x="75" y="65" text-anchor="middle" font-size="12">(Raw Data)</text>
+    </g>
+    
+    <!-- Data Warehouse -->
+    <g transform="translate(300,380)">
+        <rect width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="100" y="45" text-anchor="middle" font-size="14">Data Warehouse</text>
+        <text x="100" y="65" text-anchor="middle" font-size="12">(Processed Data)</text>
+    </g>
+    
+    <!-- Analytics Engine -->
+    <g transform="translate(600,380)">
+        <rect width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="75" y="45" text-anchor="middle" font-size="14">Analytics</text>
+        <text x="75" y="65" text-anchor="middle" font-size="14">Engine</text>
+    </g>
+    
+    <!-- Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+    
+    <!-- Source to Integration -->
+    <line x1="200" y1="130" x2="300" y2="200" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="210" x2="300" y2="210" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="200" y1="290" x2="300" y2="240" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Integration to Data Lake -->
+    <line x1="500" y1="230" x2="600" y2="230" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="550" y="220" text-anchor="middle" font-size="12">Raw Data</text>
+    
+    <!-- Integration to Data Warehouse -->
+    <line x1="400" y1="280" x2="400" y2="380" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="420" y="330" text-anchor="middle" font-size="12">Processed
+Data</text>
+    
+    <!-- Data Lake to Analytics -->
+    <line x1="675" y1="280" x2="675" y2="380" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="695" y="330" text-anchor="middle" font-size="12">Analysis</text>
+    
+    <!-- Data Warehouse to Analytics -->
+    <line x1="500" y1="430" x2="600" y2="430" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="550" y="420" text-anchor="middle" font-size="12">Query</text>
+</svg>

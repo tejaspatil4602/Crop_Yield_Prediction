@@ -1,0 +1,36 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Framework Title -->
+  <rect x="300" y="20" width="200" height="40" stroke="black" fill="white" stroke-width="2"/>
+  <text x="400" y="45" text-anchor="middle" font-family="Arial" font-size="16" fill="black">Resource Optimization Framework</text>
+  
+  <!-- Main Components -->
+  <rect x="100" y="100" width="150" height="60" stroke="black" fill="white" stroke-width="2"/>
+  <text x="175" y="130" text-anchor="middle" font-family="Arial" font-size="14" fill="black">Resource Allocation</text>
+  
+  <rect x="350" y="100" width="150" height="60" stroke="black" fill="white" stroke-width="2"/>
+  <text x="425" y="130" text-anchor="middle" font-family="Arial" font-size="14" fill="black">Monitoring</text>
+  
+  <rect x="550" y="200" width="150" height="60" stroke="black" fill="white" stroke-width="2"/>
+  <text x="625" y="230" text-anchor="middle" font-family="Arial" font-size="14" fill="black">Optimization</text>
+  
+  <rect x="350" y="300" width="150" height="60" stroke="black" fill="white" stroke-width="2"/>
+  <text x="425" y="330" text-anchor="middle" font-family="Arial" font-size="14" fill="black">Load Balancer</text>
+  
+  <rect x="100" y="200" width="150" height="60" stroke="black" fill="white" stroke-width="2"/>
+  <text x="175" y="230" text-anchor="middle" font-family="Arial" font-size="14" fill="black">Caching Layer</text>
+  
+  <!-- Arrows showing flow -->
+  <line x1="175" y1="160" x2="175" y2="200" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="175" y1="260" x2="250" y2="230" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="425" y1="160" x2="425" y2="200" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="425" y1="260" x2="425" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="550" y1="230" x2="425" y2="230" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="250" y1="100" x2="350" y2="100" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>

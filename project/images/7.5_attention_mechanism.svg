@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Input Sequence -->
+  <g transform="translate(50,50)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Input Sequence</text>
+  </g>
+
+  <!-- Query Vector -->
+  <g transform="translate(50,200)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Query Vector</text>
+  </g>
+
+  <!-- Key Vector -->
+  <g transform="translate(300,50)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Key Vector</text>
+  </g>
+
+  <!-- Value Vector -->
+  <g transform="translate(300,200)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Value Vector</text>
+  </g>
+
+  <!-- Attention Scores -->
+  <g transform="translate(550,125)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Attention Scores</text>
+  </g>
+
+  <!-- Output Context -->
+  <g transform="translate(300,350)">
+    <rect x="0" y="0" width="150" height="60" fill="white" stroke="black" stroke-width="2"/>
+    <text x="75" y="35" text-anchor="middle" font-family="Arial">Output Context</text>
+  </g>
+
+  <!-- Arrows -->
+  <!-- Input to Key -->
+  <path d="M200,80 L300,80" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Input to Value -->
+  <path d="M200,110 C250,110 250,230 300,230" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Query to Attention -->
+  <path d="M200,230 C400,230 400,155 550,155" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Key to Attention -->
+  <path d="M450,80 C500,80 500,155 550,155" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Value to Output -->
+  <path d="M375,260 L375,350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Attention to Output -->
+  <path d="M625,185 C625,300 450,350 450,350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <g font-family="Arial" font-size="12">
+    <text x="225" y="60">Transform</text>
+    <text x="475" y="135">Compute</text>
+    <text x="625" y="250">Apply</text>
+  </g>
+</svg>

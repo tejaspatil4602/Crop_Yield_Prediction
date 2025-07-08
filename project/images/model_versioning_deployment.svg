@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions for reusable elements -->
+    <defs>
+        <!-- Arrow marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
+        </marker>
+    </defs>
+
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Model Versioning and Deployment Workflow</text>
+
+    <!-- Development Environment -->
+    <rect x="50" y="100" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="125" y="145" text-anchor="middle" font-size="14">Development
+Environment</text>
+
+    <!-- Version Control -->
+    <rect x="250" y="100" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="325" y="145" text-anchor="middle" font-size="14">Version Control
+(Git/GitHub)</text>
+
+    <!-- Model Registry -->
+    <rect x="450" y="100" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="525" y="145" text-anchor="middle" font-size="14">Model Registry
+(Joblib/MLflow)</text>
+
+    <!-- Testing Environment -->
+    <rect x="250" y="250" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="325" y="295" text-anchor="middle" font-size="14">Testing
+Environment</text>
+
+    <!-- Staging Environment -->
+    <rect x="250" y="400" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="325" y="445" text-anchor="middle" font-size="14">Staging
+Environment</text>
+
+    <!-- Production Environment -->
+    <rect x="450" y="400" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="525" y="445" text-anchor="middle" font-size="14">Production
+Environment</text>
+
+    <!-- Monitoring System -->
+    <rect x="650" y="400" width="150" height="80" stroke="black" fill="white" rx="10"/>
+    <text x="725" y="445" text-anchor="middle" font-size="14">Monitoring
+System</text>
+
+    <!-- Connecting Arrows -->
+    <!-- Dev to Version Control -->
+    <line x1="200" y1="140" x2="250" y2="140" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Version Control to Model Registry -->
+    <line x1="400" y1="140" x2="450" y2="140" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Version Control to Testing -->
+    <line x1="325" y1="180" x2="325" y2="250" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Testing to Staging -->
+    <line x1="325" y1="330" x2="325" y2="400" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Staging to Production -->
+    <line x1="400" y1="440" x2="450" y2="440" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Production to Monitoring -->
+    <line x1="600" y1="440" x2="650" y2="440" stroke="black" marker-end="url(#arrowhead)" stroke-width="2"/>
+
+    <!-- Feedback Loop -->
+    <path d="M 725 400 C 725 300 125 300 125 180" fill="none" stroke="black" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+
+    <!-- Labels -->
+    <text x="125" y="250" text-anchor="middle" font-size="12">Local Development</text>
+    <text x="525" y="250" text-anchor="middle" font-size="12">Version Management</text>
+    <text x="325" y="350" text-anchor="middle" font-size="12">Validation</text>
+    <text x="525" y="350" text-anchor="middle" font-size="12">Deployment</text>
+    <text x="725" y="350" text-anchor="middle" font-size="12">Performance
+Tracking</text>
+</svg>

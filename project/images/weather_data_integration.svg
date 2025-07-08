@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Weather Data Integration</text>
+    
+    <!-- Weather Data Sources -->
+    <rect x="50" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="125" y="135" text-anchor="middle" font-size="14">Weather Data</text>
+    <text x="125" y="155" text-anchor="middle" font-size="12">Sources</text>
+    
+    <!-- Data Collection Service -->
+    <rect x="300" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="375" y="135" text-anchor="middle" font-size="14">Data Collection</text>
+    <text x="375" y="155" text-anchor="middle" font-size="12">Service</text>
+    
+    <!-- Data Processing -->
+    <rect x="550" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="625" y="135" text-anchor="middle" font-size="14">Data Processing</text>
+    <text x="625" y="155" text-anchor="middle" font-size="12">Engine</text>
+    
+    <!-- Weather Database -->
+    <rect x="175" y="250" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="250" y="285" text-anchor="middle" font-size="14">Weather</text>
+    <text x="250" y="305" text-anchor="middle" font-size="12">Database</text>
+    
+    <!-- Data Analysis Service -->
+    <rect x="425" y="250" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="500" y="285" text-anchor="middle" font-size="14">Data Analysis</text>
+    <text x="500" y="305" text-anchor="middle" font-size="12">Service</text>
+    
+    <!-- Prediction System -->
+    <rect x="300" y="400" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="375" y="435" text-anchor="middle" font-size="14">Prediction</text>
+    <text x="375" y="455" text-anchor="middle" font-size="12">System</text>
+    
+    <!-- Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+    
+    <!-- Data Sources to Collection Service -->
+    <line x1="200" y1="140" x2="300" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="250" y="130" text-anchor="middle" font-size="12">API Calls</text>
+    
+    <!-- Collection to Processing -->
+    <line x1="450" y1="140" x2="550" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="500" y="130" text-anchor="middle" font-size="12">Raw Data</text>
+    
+    <!-- Processing to Database -->
+    <line x1="575" y1="180" x2="325" y2="250" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="450" y="200" text-anchor="middle" font-size="12">Processed Data</text>
+    
+    <!-- Database to Analysis -->
+    <line x1="325" y1="290" x2="425" y2="290" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="375" y="280" text-anchor="middle" font-size="12">Query</text>
+    
+    <!-- Analysis to Prediction -->
+    <line x1="500" y1="330" x2="375" y2="400" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="450" y="380" text-anchor="middle" font-size="12">Weather
+Features</text>
+    
+    <!-- Real-time Updates Path -->
+    <path d="M 625,180 Q 625,290 450,400" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="640" y="290" text-anchor="middle" font-size="12">Real-time
+Updates</text>
+</svg>

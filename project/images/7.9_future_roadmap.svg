@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Timeline Base -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="black" stroke-width="2"/>
+
+  <!-- Milestone Points -->
+  <g>
+    <!-- Phase 1 -->
+    <circle cx="150" cy="300" r="10" fill="white" stroke="black" stroke-width="2"/>
+    <text x="150" y="340" text-anchor="middle" font-family="Arial">Q1</text>
+    <text x="150" y="270" text-anchor="middle" font-family="Arial" font-size="12">System
+Optimization</text>
+
+    <!-- Phase 2 -->
+    <circle cx="300" cy="300" r="10" fill="white" stroke="black" stroke-width="2"/>
+    <text x="300" y="340" text-anchor="middle" font-family="Arial">Q2</text>
+    <text x="300" y="270" text-anchor="middle" font-family="Arial" font-size="12">Feature
+Expansion</text>
+
+    <!-- Phase 3 -->
+    <circle cx="450" cy="300" r="10" fill="white" stroke="black" stroke-width="2"/>
+    <text x="450" y="340" text-anchor="middle" font-family="Arial">Q3</text>
+    <text x="450" y="270" text-anchor="middle" font-family="Arial" font-size="12">Integration
+Enhancements</text>
+
+    <!-- Phase 4 -->
+    <circle cx="600" cy="300" r="10" fill="white" stroke="black" stroke-width="2"/>
+    <text x="600" y="340" text-anchor="middle" font-family="Arial">Q4</text>
+    <text x="600" y="270" text-anchor="middle" font-family="Arial" font-size="12">Scale
+Deployment</text>
+  </g>
+
+  <!-- Development Tracks -->
+  <g transform="translate(0,400)">
+    <!-- Track 1 -->
+    <rect x="100" y="0" width="150" height="40" fill="white" stroke="black" stroke-width="2"/>
+    <text x="175" y="25" text-anchor="middle" font-family="Arial">Performance Optimization</text>
+
+    <!-- Track 2 -->
+    <rect x="250" y="0" width="150" height="40" fill="white" stroke="black" stroke-width="2"/>
+    <text x="325" y="25" text-anchor="middle" font-family="Arial">API Enhancement</text>
+
+    <!-- Track 3 -->
+    <rect x="400" y="0" width="150" height="40" fill="white" stroke="black" stroke-width="2"/>
+    <text x="475" y="25" text-anchor="middle" font-family="Arial">ML Model Updates</text>
+
+    <!-- Track 4 -->
+    <rect x="550" y="0" width="150" height="40" fill="white" stroke="black" stroke-width="2"/>
+    <text x="625" y="25" text-anchor="middle" font-family="Arial">Security Hardening</text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <g stroke="black" stroke-width="1" stroke-dasharray="5,5">
+    <line x1="150" y1="310" x2="175" y2="400"/>
+    <line x1="300" y1="310" x2="325" y2="400"/>
+    <line x1="450" y1="310" x2="475" y2="400"/>
+    <line x1="600" y1="310" x2="625" y2="400"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Future Development Roadmap</text>
+
+  <!-- Legend -->
+  <g transform="translate(100,100)">
+    <rect width="200" height="80" fill="white" stroke="black" stroke-width="1"/>
+    <circle cx="20" cy="20" r="5" fill="white" stroke="black" stroke-width="2"/>
+    <text x="40" y="25" font-family="Arial">Milestone</text>
+    <rect x="10" y="40" width="20" height="20" fill="white" stroke="black" stroke-width="2"/>
+    <text x="40" y="55" font-family="Arial">Development Track</text>
+  </g>
+</svg>

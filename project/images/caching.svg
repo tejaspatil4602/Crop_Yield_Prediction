@@ -1,0 +1,43 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Caching Strategy Diagram -->
+  <rect x="100" y="50" width="200" height="100" stroke="black" fill="white" stroke-width="2"/>
+  <text x="200" y="110" text-anchor="middle" fill="black">Application</text>
+  
+  <rect x="100" y="200" width="200" height="100" stroke="black" fill="white" stroke-width="2"/>
+  <text x="200" y="260" text-anchor="middle" fill="black">Cache Layer</text>
+  
+  <rect x="100" y="350" width="200" height="100" stroke="black" fill="white" stroke-width="2"/>
+  <text x="200" y="410" text-anchor="middle" fill="black">Database</text>
+  
+  <!-- Cache Flow -->
+  <line x1="200" y1="150" x2="200" y2="200" stroke="black" stroke-width="2"/>
+  <polygon points="200,200 195,190 205,190" fill="black"/>
+  
+  <line x1="200" y1="300" x2="200" y2="350" stroke="black" stroke-width="2"/>
+  <polygon points="200,350 195,340 205,340" fill="black"/>
+  
+  <!-- Cache Hit/Miss -->
+  <path d="M400,150 L500,150 L500,250 L400,250 Z" stroke="black" fill="white" stroke-width="2"/>
+  <text x="450" y="200" text-anchor="middle" fill="black">Cache Hit</text>
+  
+  <path d="M400,300 L500,300 L500,400 L400,400 Z" stroke="black" fill="white" stroke-width="2"/>
+  <text x="450" y="350" text-anchor="middle" fill="black">Cache Miss</text>
+  
+  <!-- Arrows -->
+  <line x1="300" y1="200" x2="400" y2="200" stroke="black" stroke-width="2"/>
+  <polygon points="400,200 390,195 390,205" fill="black"/>
+  
+  <line x1="300" y1="300" x2="400" y2="300" stroke="black" stroke-width="2"/>
+  <polygon points="400,300 390,295 390,305" fill="black"/>
+  
+  <!-- Cache Update -->
+  <line x1="450" y1="250" x2="450" y2="300" stroke="black" stroke-width="2" stroke-dasharray="5,5"/>
+  <polygon points="450,300 445,290 455,290" fill="black"/>
+  
+  <!-- Cache Eviction -->
+  <path d="M600,200 L650,200 L650,300 L600,300 Z" stroke="black" fill="white" stroke-width="2"/>
+  <text x="625" y="250" text-anchor="middle" fill="black">Eviction</text>
+  
+  <line x1="500" y1="250" x2="600" y2="250" stroke="black" stroke-width="2"/>
+  <polygon points="600,250 590,245 590,255" fill="black"/>
+</svg>

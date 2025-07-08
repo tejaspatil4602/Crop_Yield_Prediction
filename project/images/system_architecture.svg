@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="600" y="50" text-anchor="middle" font-size="24" font-weight="bold">Complete System Architecture</text>
+
+    <!-- User Interface Layer -->
+    <g transform="translate(0,100)">
+        <rect x="200" y="0" width="800" height="150" fill="white" stroke="black" stroke-width="2"/>
+        <text x="600" y="30" text-anchor="middle" font-weight="bold">User Interface Layer</text>
+        <rect x="250" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="325" y="85" text-anchor="middle">Authentication Interface</text>
+        <rect x="450" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="525" y="85" text-anchor="middle">Prediction Dashboard</text>
+        <rect x="650" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="725" y="85" text-anchor="middle">Analytics Module</text>
+        <rect x="850" y="50" width="100" height="60" fill="white" stroke="black"/>
+        <text x="900" y="85" text-anchor="middle">Admin Console</text>
+    </g>
+
+    <!-- Application Layer -->
+    <g transform="translate(0,300)">
+        <rect x="200" y="0" width="800" height="200" fill="white" stroke="black" stroke-width="2"/>
+        <text x="600" y="30" text-anchor="middle" font-weight="bold">Application Layer</text>
+        
+        <!-- Core Services -->
+        <rect x="250" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="325" y="85" text-anchor="middle">Authentication Service</text>
+        
+        <rect x="450" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="525" y="85" text-anchor="middle">Prediction Service</text>
+        
+        <rect x="650" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="725" y="85" text-anchor="middle">Analytics Service</text>
+
+        <!-- Additional Services -->
+        <rect x="250" y="120" width="150" height="60" fill="white" stroke="black"/>
+        <text x="325" y="155" text-anchor="middle">Data Integration</text>
+        
+        <rect x="450" y="120" width="150" height="60" fill="white" stroke="black"/>
+        <text x="525" y="155" text-anchor="middle">Model Management</text>
+        
+        <rect x="650" y="120" width="150" height="60" fill="white" stroke="black"/>
+        <text x="725" y="155" text-anchor="middle">Monitoring System</text>
+    </g>
+
+    <!-- Data Layer -->
+    <g transform="translate(0,550)">
+        <rect x="200" y="0" width="800" height="150" fill="white" stroke="black" stroke-width="2"/>
+        <text x="600" y="30" text-anchor="middle" font-weight="bold">Data Layer</text>
+        
+        <rect x="250" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="325" y="85" text-anchor="middle">User Database</text>
+        
+        <rect x="450" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="525" y="85" text-anchor="middle">Model Storage</text>
+        
+        <rect x="650" y="50" width="150" height="60" fill="white" stroke="black"/>
+        <text x="725" y="85" text-anchor="middle">Analytics Data</text>
+        
+        <rect x="850" y="50" width="100" height="60" fill="white" stroke="black"/>
+        <text x="900" y="85" text-anchor="middle">Cache</text>
+    </g>
+
+    <!-- External Services Layer -->
+    <g transform="translate(0,750)">
+        <rect x="200" y="0" width="800" height="100" fill="white" stroke="black" stroke-width="2"/>
+        <text x="600" y="30" text-anchor="middle" font-weight="bold">External Services</text>
+        
+        <rect x="250" y="40" width="150" height="40" fill="white" stroke="black"/>
+        <text x="325" y="65" text-anchor="middle">Weather API</text>
+        
+        <rect x="450" y="40" width="150" height="40" fill="white" stroke="black"/>
+        <text x="525" y="65" text-anchor="middle">Geographic Data</text>
+        
+        <rect x="650" y="40" width="150" height="40" fill="white" stroke="black"/>
+        <text x="725" y="65" text-anchor="middle">Third-party APIs</text>
+    </g>
+
+    <!-- Interaction Arrows -->
+    <!-- UI to Application Layer -->
+    <g>
+        <path d="M 325 210 L 325 300" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 525 210 L 525 300" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 725 210 L 725 300" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Application to Data Layer -->
+    <g>
+        <path d="M 325 500 L 325 550" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 525 500 L 525 550" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 725 500 L 725 550" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Application to External Services -->
+    <g>
+        <path d="M 325 500 L 325 750" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 525 500 L 525 750" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+        <path d="M 725 500 L 725 750" fill="none" stroke="black" marker-end="url(#arrowhead)"/>
+    </g>
+
+    <!-- Arrow Marker Definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+</svg>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Frontend Layer -->
+    <g transform="translate(50, 50)">
+        <rect width="200" height="150" rx="10" fill="#61dafb" opacity="0.8"/>
+        <text x="100" y="30" text-anchor="middle" fill="#000" font-weight="bold">Frontend (React.js)</text>
+        <text x="20" y="60" fill="#000" font-size="12">• Components</text>
+        <text x="20" y="80" fill="#000" font-size="12">• State Management</text>
+        <text x="20" y="100" fill="#000" font-size="12">• React Router</text>
+        <text x="20" y="120" fill="#000" font-size="12">• Tailwind CSS</text>
+    </g>
+
+    <!-- Backend Layer -->
+    <g transform="translate(550, 50)">
+        <rect width="200" height="150" rx="10" fill="#68a063" opacity="0.8"/>
+        <text x="100" y="30" text-anchor="middle" fill="#000" font-weight="bold">Backend (Node.js)</text>
+        <text x="20" y="60" fill="#000" font-size="12">• Express API</text>
+        <text x="20" y="80" fill="#000" font-size="12">• Authentication</text>
+        <text x="20" y="100" fill="#000" font-size="12">• MongoDB</text>
+        <text x="20" y="120" fill="#000" font-size="12">• Middleware</text>
+    </g>
+
+    <!-- ML Layer -->
+    <g transform="translate(300, 300)">
+        <rect width="200" height="150" rx="10" fill="#4b8bbe" opacity="0.8"/>
+        <text x="100" y="30" text-anchor="middle" fill="#000" font-weight="bold">ML Services (Python)</text>
+        <text x="20" y="60" fill="#000" font-size="12">• PyTorch</text>
+        <text x="20" y="80" fill="#000" font-size="12">• Scikit-learn</text>
+        <text x="20" y="100" fill="#000" font-size="12">• Flask API</text>
+        <text x="20" y="120" fill="#000" font-size="12">• Data Pipeline</text>
+    </g>
+
+    <!-- Interaction Arrows -->
+    <!-- Frontend to Backend -->
+    <g>
+        <path d="M 250,125 L 550,125" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="400" y="110" text-anchor="middle" fill="#333" font-size="12">REST API Calls</text>
+    </g>
+
+    <!-- Backend to ML -->
+    <g>
+        <path d="M 650,200 L 500,300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="600" y="270" text-anchor="middle" fill="#333" font-size="12">Model Inference</text>
+    </g>
+
+    <!-- ML to Backend -->
+    <g>
+        <path d="M 300,375 L 600,200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+        <text x="400" y="320" text-anchor="middle" fill="#333" font-size="12">Predictions</text>
+    </g>
+
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+
+    <!-- Legend -->
+    <g transform="translate(50, 500)">
+        <text x="0" y="0" fill="#333" font-size="14" font-weight="bold">Data Flow:</text>
+        <text x="0" y="20" fill="#333" font-size="12">→ HTTP/REST Communication</text>
+        <text x="0" y="40" fill="#333" font-size="12">→ Internal API Calls</text>
+        <text x="0" y="60" fill="#333" font-size="12">→ Data Processing</text>
+    </g>
+</svg>

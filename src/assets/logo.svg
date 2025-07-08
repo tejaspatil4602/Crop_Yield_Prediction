@@ -1,0 +1,14 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#ffffff">
+    <!-- Bar Chart -->
+    <path d="M5 30h6v-8H5v8zm0 2h6v2H5v-2z"/>
+    <path d="M13 25h6V15h-6v10zm0 7h6v-2h-6v2z"/>
+    <path d="M21 20h6V10h-6v10zm0 12h6v-2h-6v2z"/>
+    <!-- Arrow -->
+    <path d="M28 8l7-7v5h-4z"/>
+    <!-- Microchip -->
+    <path d="M35 25v-3h-2v3h-3v2h3v3h2v-3h3v-2z"/>
+    <!-- Plant -->
+    <path d="M15 35c0-5 3-8 3-8s-6-3-6 4c0 4 3 7 3 7s-3-5 0-3zm10 0c0-5-3-8-3-8s6-3 6 4c0 4-3 7-3 7s3-5 0-3z"/>
+  </g>
+</svg>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Model Versioning and Deployment</text>
+    
+    <!-- Development Environment -->
+    <rect x="50" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="125" y="145" text-anchor="middle" font-size="14">Development
+Environment</text>
+    
+    <!-- Version Control -->
+    <rect x="300" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="375" y="145" text-anchor="middle" font-size="14">Version Control
+Repository</text>
+    
+    <!-- Model Registry -->
+    <rect x="550" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="625" y="145" text-anchor="middle" font-size="14">Model Registry</text>
+    
+    <!-- Testing Environment -->
+    <rect x="175" y="250" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="250" y="295" text-anchor="middle" font-size="14">Testing
+Environment</text>
+    
+    <!-- Staging Environment -->
+    <rect x="425" y="250" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="500" y="295" text-anchor="middle" font-size="14">Staging
+Environment</text>
+    
+    <!-- Production Environment -->
+    <rect x="300" y="400" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="375" y="445" text-anchor="middle" font-size="14">Production
+Environment</text>
+    
+    <!-- Arrows -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+    
+    <!-- Development to Version Control -->
+    <line x1="200" y1="140" x2="300" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="250" y="130" text-anchor="middle" font-size="12">Commit</text>
+    
+    <!-- Version Control to Model Registry -->
+    <line x1="450" y1="140" x2="550" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="500" y="130" text-anchor="middle" font-size="12">Register</text>
+    
+    <!-- Version Control to Testing -->
+    <line x1="325" y1="180" x2="250" y2="250" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="270" y="220" text-anchor="middle" font-size="12">Deploy</text>
+    
+    <!-- Testing to Staging -->
+    <line x1="325" y1="290" x2="425" y2="290" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="375" y="280" text-anchor="middle" font-size="12">Promote</text>
+    
+    <!-- Staging to Production -->
+    <line x1="500" y1="330" x2="375" y2="400" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="450" y="380" text-anchor="middle" font-size="12">Deploy</text>
+    
+    <!-- Model Registry to Production -->
+    <path d="M 625,180 Q 625,290 450,400" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="640" y="290" text-anchor="middle" font-size="12">Version
+Control</text>
+</svg>

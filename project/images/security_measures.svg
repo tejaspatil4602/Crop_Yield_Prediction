@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Security Measures and Data Protection</text>
+    
+    <!-- User Layer -->
+    <rect x="50" y="100" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="125" y="145" text-anchor="middle" font-size="14">User Interface</text>
+    <text x="125" y="165" text-anchor="middle" font-size="12">Authentication &amp;</text>
+    <text x="125" y="180" text-anchor="middle" font-size="12">Access Control</text>
+
+    <!-- Authentication Layer -->
+    <rect x="300" y="100" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="135" text-anchor="middle" font-size="14">Authentication Layer</text>
+    <text x="400" y="155" text-anchor="middle" font-size="12">Multi-Factor Authentication</text>
+    <text x="400" y="170" text-anchor="middle" font-size="12">Token Management</text>
+
+    <!-- Application Layer -->
+    <rect x="300" y="250" width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="280" text-anchor="middle" font-size="14">Application Layer</text>
+    <text x="400" y="300" text-anchor="middle" font-size="12">Data Validation</text>
+    <text x="400" y="315" text-anchor="middle" font-size="12">Request Processing</text>
+    <text x="400" y="330" text-anchor="middle" font-size="12">Security Logging</text>
+
+    <!-- Data Protection Layer -->
+    <rect x="300" y="400" width="200" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="400" y="430" text-anchor="middle" font-size="14">Data Protection Layer</text>
+    <text x="400" y="450" text-anchor="middle" font-size="12">Encryption</text>
+    <text x="400" y="465" text-anchor="middle" font-size="12">Access Control</text>
+    <text x="400" y="480" text-anchor="middle" font-size="12">Audit Logging</text>
+
+    <!-- Database Layer -->
+    <rect x="600" y="400" width="150" height="100" fill="white" stroke="black" stroke-width="2"/>
+    <text x="675" y="430" text-anchor="middle" font-size="14">Database</text>
+    <text x="675" y="450" text-anchor="middle" font-size="12">Encrypted Storage</text>
+    <text x="675" y="465" text-anchor="middle" font-size="12">Backup Systems</text>
+    <text x="675" y="480" text-anchor="middle" font-size="12">Data Redundancy</text>
+
+    <!-- Monitoring System -->
+    <rect x="600" y="250" width="150" height="80" fill="white" stroke="black" stroke-width="2"/>
+    <text x="675" y="280" text-anchor="middle" font-size="14">Security Monitoring</text>
+    <text x="675" y="300" text-anchor="middle" font-size="12">Real-time Alerts</text>
+    <text x="675" y="315" text-anchor="middle" font-size="12">Threat Detection</text>
+
+    <!-- Arrows -->
+    <!-- User to Auth -->
+    <line x1="200" y1="140" x2="300" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- Auth to App -->
+    <line x1="400" y1="180" x2="400" y2="250" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- App to Data Protection -->
+    <line x1="400" y1="350" x2="400" y2="400" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- Data Protection to Database -->
+    <line x1="500" y1="450" x2="600" y2="450" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- App to Monitoring -->
+    <line x1="500" y1="290" x2="600" y2="290" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+
+    <!-- Security Perimeter Box -->
+    <rect x="280" y="80" width="490" height="440" fill="none" stroke="black" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="290" y="100" font-size="12">Security Perimeter</text>
+</svg>
